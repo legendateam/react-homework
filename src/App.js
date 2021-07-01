@@ -1,12 +1,10 @@
-import Menu from "./components/menu/Menu";
-import Users from "./components/users/Users";
+import AllPosts from "./components/allposts/AllPosts";
+
 
 export default function App() {
   return (
       <div>
-          <Menu pages={["left", "center", "right"]}/>
-          <Users/>
-          <Menu pages={["downleft","downright"]}/>
+          <AllPosts/>
       </div>
   )
 }
