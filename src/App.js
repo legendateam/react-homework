@@ -1,10 +1,10 @@
-import AllPosts from "./components/allposts/AllPosts";
+import AllComments from "./components/allcomments/AllComments";
 
 
 export default function App() {
   return (
       <div>
-          <AllPosts/>
+          <AllComments/>
       </div>
   )
 }
