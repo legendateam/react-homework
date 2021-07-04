@@ -1,11 +1,10 @@
-import AllComments from "./components/allcomments/AllComments";
-
+import Users from "./components/allusers/Users";
 
 export default function App() {
   return (
       <div>
-          <AllComments/>
-      </div>
-  )
-}
+              <Users/>
+       </div>
+  );
+};
 
