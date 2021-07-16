@@ -9,7 +9,7 @@ export default function Posts({posts,dispatch}) {
   return (
       <div>
           {
-              posts.map(value => <Post item={value}/>)
+              posts.map(value => <Post key={value.id} item={value}/>)
           }
       </div>
   )

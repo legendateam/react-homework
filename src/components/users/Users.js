@@ -9,7 +9,7 @@ export default function Users({users, dispatch}) {
   return (
       <div>
           {
-              users.map(value => <User item={value}/>)
+              users.map(value => <User key={value.id} item={value}/>)
           }
       </div>
   )

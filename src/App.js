@@ -21,9 +21,9 @@ function App() {
               <hr/>
               <Switch>
                   <Route exact path={"/"}/>
-                  <Route path={"/users"} render={() => <Users users={state.users} dispatch={dispatch}/>}/>
-                  <Route path={"/posts"} render={() => <Posts posts={state.posts} dispatch={dispatch}/>}/>
-                  <Route path={"/comments"} render= {() => <Comments comments={state.comments} dispatch={dispatch}/>}/>
+                  <Route path={"/users"} render={(props) => <Users users={state.users} dispatch={dispatch}/>}/>
+                  <Route path={"/posts"} render={(props) => <Posts posts={state.posts} dispatch={dispatch}/>}/>
+                  <Route path={"/comments"} render= {(props) => <Comments comments={state.comments} dispatch={dispatch}/>}/>
               </Switch>
         </div>
       </Router>
