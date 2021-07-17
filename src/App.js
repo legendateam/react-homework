@@ -27,9 +27,9 @@ function App() {
                 <br/>
                 <Switch>
                     <Route exact path={"/"}/>
-                    <Route path={"/users"} render={(props) => <Users dispatch={dispatch} users={users} fnPostID={fnPostID} poststitle={poststitle}/>}/>
-                    <Route path={"/posts"} render={(props) => <Posts dispatch={dispatch} posts={posts} fnCommentsID={fnCommentsID} postscomments={postscomments}/>}/>
-                    <Route path={"/comments"} render={(props) => <Comments dispatch={dispatch} comments={comments}/>}/>
+                    <Route path={"/users"} render={(props) => <Users {...props} dispatch={dispatch} users={users} fnPostID={fnPostID} poststitle={poststitle}/>}/>
+                    <Route path={"/posts"} render={(props) => <Posts {...props} dispatch={dispatch} posts={posts} fnCommentsID={fnCommentsID} postscomments={postscomments}/>}/>
+                    <Route path={"/comments"} render={(props) => <Comments {...props} dispatch={dispatch} comments={comments}/>}/>
                 </Switch>
             </div>
         </Router>
