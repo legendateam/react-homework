@@ -4,9 +4,44 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {Provider} from "react-redux";
+import {createStore} from "redux";
+
+
+const initionalState = {
+    counter: {
+        value: 0
+    }
+};
+
+const reducer = (state = initionalState, action) => {
+    switch (action.type) {
+        case "INC" : {
+            return {
+                ...state,
+                counter: {
+                    value: state.counter.value + 1
+                }
+            }
+        }
+        default:
+            return state;
+    };
+};
+
+const store = createStore(reducer);
+
+const INCREMENT_ACTION = {
+    type: "INC",
+};
+
+store.dispatch(INCREMENT_ACTION)
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Provider store={store}>
+          <App />
+      </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
